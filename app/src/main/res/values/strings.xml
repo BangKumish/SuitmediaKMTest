@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Suitmedia KM Test</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="welcome">Welcome</string>
+    <string name="john_doe">John Doe</string>
+    <string name="select_a_username">Select a Username</string>
+    <string name="choose_a_user">Choose a User</string>
+    <string name="icon_kampus_merdeka">Icon Kampus Merdeka</string>
+    <string name="name">Name</string>
+    <string name="palindrome">Palindrome</string>
+    <string name="next">NEXT</string>
+    <string name="check_palindrome">CHECK PALINDROME</string>
+</resources>
