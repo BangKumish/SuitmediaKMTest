@@ -17,7 +17,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="200dp"
-            android:src="@drawable/icon"
+            android:src="@drawable/ic_photo"
             android:contentDescription="@string/icon_kampus_merdeka" />
 
         <EditText
@@ -45,6 +45,15 @@
             tools:ignore="TextFields" />
 
         <Button
+            android:id="@+id/palindromeButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/check_palindrome"
+            android:background="@drawable/first_screen_button"/>
+
+        <Button
             android:id="@+id/nextButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -53,15 +62,6 @@
             android:text="@string/next"
             android:background="@drawable/first_screen_button"
             />
-
-        <Button
-            android:id="@+id/palindromeButton"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="@string/check_palindrome"
-            android:background="@drawable/first_screen_button"/>
 
     </LinearLayout>
 </RelativeLayout>
