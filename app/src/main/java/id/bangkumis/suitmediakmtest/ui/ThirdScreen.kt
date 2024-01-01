@@ -39,7 +39,7 @@ class ThirdScreen: AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         adapter.setClickCallback(object : Adapter.OnItemClickCallback{
             override fun onItemClicked(data: DataItem) {
                 Intent(this@ThirdScreen, SecondScreen::class.java).also{
-                    it.putExtra(SecondScreen.EXTRA_NAME, data.firstName)
+                    it.putExtra(SecondScreen.SELECTED, data.firstName)
                     startActivity(it)
                     page = 1
                     finish()

@@ -24,24 +24,24 @@ class SecondScreen: AppCompatActivity() {
         val username = intent.getStringExtra(EXTRA_NAME)
         binding.usernameTV.text = username
 
-        setupAction()
+        setupAction(username!!)
     }
 
-    private fun setupAction(){
-        var selectedUser = binding.tvSelectedUser.isVisible
+    private fun setupAction(username: String){
+//        var selectedUser = binding.tvSelectedUser.isVisible
         binding.choseUserButton.setOnClickListener {
             val thirdScreen = Intent(this, ThirdScreen::class.java)
-            if(!selectedUser){
-                startActivity(thirdScreen)
-            } else {
-                Toast.makeText(this, "Click a name!", Toast.LENGTH_SHORT).show()
-            }
+            startActivity(thirdScreen)
+//            if(!selectedUser){
+//            } else {
+//                Toast.makeText(this, "Click a name!", Toast.LENGTH_SHORT).show()
+//            }
         }
         binding.usernameTV.setOnClickListener {
             binding.tvSelectedUser.visibility = View.VISIBLE
-            binding.tvSelectedUser.text = SELECTED
+            binding.tvSelectedUser.text = username
             binding.tvSelectedUser.setTextColor(ContextCompat.getColor(this, R.color.grey))
-            selectedUser = false
+//            selectedUser = false
         }
     }
 
@@ -52,6 +52,6 @@ class SecondScreen: AppCompatActivity() {
 
     companion object{
         const val EXTRA_NAME = "extra_name"
-        const val SELECTED = "Selected User Name"
+        const val SELECTED = "selected"
     }
 }
