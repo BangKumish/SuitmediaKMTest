@@ -38,12 +38,19 @@ class ThirdScreen: AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         binding.userRV.setHasFixedSize(true)
         adapter.setClickCallback(object : Adapter.OnItemClickCallback{
             override fun onItemClicked(data: DataItem) {
-                Intent(this@ThirdScreen, SecondScreen::class.java).also{
-                    it.putExtra(SecondScreen.SELECTED, data.firstName)
-                    startActivity(it)
-                    page = 1
-                    finish()
-                }
+                val resultIntent = Intent()
+                resultIntent.putExtra(SecondScreen.SELECTED, data.firstName + " " + data.lastName)
+                resultIntent.putExtra(SecondScreen.SELECTED_AVATAR, data.avatar)
+                setResult(RESULT_OK, resultIntent)
+                finish()
+
+//                Intent(this@ThirdScreen, SecondScreen::class.java).also{
+//                    it.putExtra(SecondScreen.SELECTED, data.firstName)
+//                    it.putExtra(SecondScreen.SELECTED_AVATAR, data.avatar)
+//                    startActivity(it)
+//                    page = 1
+//                    finish()
+//                }
             }
         })
 

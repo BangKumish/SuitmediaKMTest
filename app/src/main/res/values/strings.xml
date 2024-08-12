@@ -12,4 +12,5 @@
     <string name="palindrome">Palindrome</string>
     <string name="next">NEXT</string>
     <string name="check_palindrome">CHECK PALINDROME</string>
+    <string name="selected_user_picture">Selected User Picture</string>
 </resources>
